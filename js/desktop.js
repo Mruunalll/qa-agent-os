@@ -31,15 +31,22 @@ const appMap = {
   resume: () => ({
     title: "resume.pdf",
     render() {
+      const resumePath = "assets/Mrunal_Patil_QA_Software_Testing_Engineer_Resume.pdf";
       return `
         <section class="app-hero">
           <h2>Resume</h2>
-          <p>Download Senior QA / SDET / AI Testing resume.</p>
+          <p>Preview and download Mrunal Patil's QA / Software Testing Engineer resume.</p>
         </section>
         <div class="resume-actions">
-          <a href="assets/resume.pdf" download>Download PDF</a>
+          <a href="${resumePath}" download>Download PDF</a>
+          <a href="${resumePath}" target="_blank" rel="noreferrer">Open PDF</a>
           <a href="assets/resume.docx" download>Download DOCX</a>
         </div>
+        <section class="resume-preview" aria-label="Resume PDF preview">
+          <a href="${resumePath}" target="_blank" rel="noreferrer" aria-label="Open resume PDF preview">
+            <img src="assets/resume-preview.png" alt="Preview of Mrunal Patil resume" />
+          </a>
+        </section>
       `;
     }
   })

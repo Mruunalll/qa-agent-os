@@ -371,6 +371,7 @@ input {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  margin-bottom: 14px;
 }
 
 .resume-actions a,
@@ -391,6 +392,28 @@ input {
 .contact-actions a:hover,
 .contact-actions button:hover {
   border-color: var(--teal);
+}
+
+.resume-preview {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.06);
+  text-align: center;
+}
+
+.resume-preview a {
+  display: block;
+  padding: 16px;
+}
+
+.resume-preview img {
+  display: block;
+  width: min(100%, 900px);
+  height: auto;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
 }
 
 .mobile-scrim {
@@ -448,6 +471,10 @@ input {
 
   .content-panel {
     padding: 14px;
+  }
+
+  .resume-preview a {
+    padding: 8px;
   }
 }
 
