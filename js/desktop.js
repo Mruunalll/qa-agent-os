@@ -101,24 +101,12 @@ function renderApp(appName, options = {}) {
   setSidebarOpen(false);
 }
 
-function startRoleTyping() {
-  const target = document.querySelector("#typedRole");
-  const text = target.dataset.text || target.textContent.trim();
-  target.dataset.text = text;
-  target.textContent = "";
-
-  let index = 0;
-  const typeNext = () => {
-    target.textContent = text.slice(0, index);
-    index += 1;
-    if (index <= text.length) window.setTimeout(typeNext, 34);
-  };
-
-  typeNext();
-}
-
 function bindSidebar() {
   document.querySelectorAll(".sidebar-item").forEach((button) => {
+    button.addEventListener("click", () => renderApp(button.dataset.app, { focusPanel: true }));
+  });
+
+  document.querySelectorAll(".topbar-btn[data-app]").forEach((button) => {
     button.addEventListener("click", () => renderApp(button.dataset.app, { focusPanel: true }));
   });
 
@@ -152,7 +140,6 @@ function bindKeyboardShortcuts() {
 async function bootDesktop() {
   updateClock();
   setInterval(updateClock, 30000);
-  startRoleTyping();
   await loadData();
   bindSidebar();
   bindCopyButtons();
