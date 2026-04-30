@@ -1,0 +1,120 @@
+.terminal-window {
+  background: rgba(1, 7, 12, 0.88);
+  font-family: "SFMono-Regular", Consolas, monospace;
+}
+
+.terminal-output {
+  min-height: 320px;
+  color: #b7c9d4;
+  line-height: 1.65;
+  white-space: pre-wrap;
+}
+
+.terminal-output .prompt {
+  color: var(--teal);
+}
+
+.terminal-output .warn {
+  color: var(--amber);
+}
+
+.terminal-form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+}
+
+.terminal-form span {
+  color: var(--teal);
+}
+
+.terminal-form input {
+  flex: 1;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+}
+
+.ai-chat {
+  display: grid;
+  gap: 14px;
+}
+
+.quick-questions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.quick-questions button,
+.chat-form button,
+.contact-actions a,
+.contact-actions button,
+.resume-actions a {
+  min-height: 40px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 9px 12px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  font: inherit;
+  font-weight: 800;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.quick-questions button:hover,
+.chat-form button:hover,
+.contact-actions a:hover,
+.contact-actions button:hover,
+.resume-actions a:hover {
+  border-color: var(--teal);
+}
+
+.chat-log {
+  display: grid;
+  gap: 10px;
+  max-height: 340px;
+  overflow: auto;
+}
+
+.message {
+  max-width: 88%;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 12px 14px;
+  background: rgba(255, 255, 255, 0.07);
+  line-height: 1.5;
+}
+
+.message.user {
+  justify-self: end;
+  border-color: rgba(85, 214, 194, 0.3);
+  background: rgba(85, 214, 194, 0.1);
+}
+
+.chat-form {
+  display: flex;
+  gap: 10px;
+}
+
+.chat-form input {
+  flex: 1;
+  min-height: 42px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0 12px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+}
+
+.contact-actions,
+.resume-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}

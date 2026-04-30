@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="QA Agent OS boot screen for Mrunal Patil's Senior QA / SDET portfolio." />
+    <title>QA Agent OS · Boot</title>
+    <link rel="stylesheet" href="style/boot.css" />
+  </head>
+  <body>
+    <main class="boot-shell" aria-label="QA Agent OS boot screen">
+      <section class="boot-card">
+        <div class="boot-mark">QA</div>
+        <p class="boot-kicker">Mrunal Patil Portfolio Runtime</p>
+        <h1>QA Agent OS</h1>
+        <div class="boot-terminal" id="bootLog" aria-live="polite"></div>
+        <div class="boot-progress" aria-label="Loading progress">
+          <span id="bootBar"></span>
+        </div>
+        <button id="skipBoot" type="button">Enter Desktop</button>
+      </section>
+    </main>
+    <script src="js/boot.js"></script>
+  </body>
+</html>

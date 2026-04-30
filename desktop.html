@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="QA Agent OS VS Code-style portfolio for Mrunal Patil: Senior QA Engineer, SDET, AI Testing Specialist."
+    />
+    <title>QA Agent OS · Mrunal Patil</title>
+    <link rel="stylesheet" href="style/desktop.css" />
+    <link rel="stylesheet" href="style/terminal.css" />
+  </head>
+  <body>
+    <div class="wallpaper" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <div class="topbar-brand">
+        <button class="hamburger" id="sidebarToggle" type="button" aria-label="Open navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <span class="os-logo">QA</span>
+        <span>Agent OS</span>
+      </div>
+
+      <nav class="topbar-status" aria-label="System status">
+        <span id="statusClock">--:--</span>
+        <span>Mrunal Patil</span>
+        <span class="status-pill">AI Ready</span>
+      </nav>
+    </header>
+
+    <div class="mobile-scrim" id="mobileScrim" hidden></div>
+
+    <aside class="sidebar" id="sidebar" aria-label="Portfolio apps">
+      <section class="profile-strip">
+        <img src="assets/photo.jpg" alt="Mrunal Patil" />
+        <div>
+          <p>Mrunal Patil</p>
+          <span>Senior QA · SDET · AI Tester</span>
+        </div>
+      </section>
+
+      <nav class="sidebar-nav">
+        <button class="sidebar-item" type="button" data-app="experience">
+          <span>📁</span><strong>experience.exe</strong>
+        </button>
+        <button class="sidebar-item" type="button" data-app="projects">
+          <span>🧪</span><strong>run_tests.sh</strong>
+        </button>
+        <button class="sidebar-item" type="button" data-app="ai">
+          <span>🤖</span><strong>ai_agent.chat</strong>
+        </button>
+        <button class="sidebar-item" type="button" data-app="security">
+          <span>🛡️</span><strong>security_scan</strong>
+        </button>
+        <button class="sidebar-item" type="button" data-app="skills">
+          <span>⚙️</span><strong>skills.exe</strong>
+        </button>
+        <button class="sidebar-item" type="button" data-app="terminal">
+          <span>⌁</span><strong>terminal.sh</strong>
+        </button>
+        <button class="sidebar-item" type="button" data-app="resume">
+          <span>📄</span><strong>resume.pdf</strong>
+        </button>
+        <button class="sidebar-item" type="button" data-app="contact">
+          <span>✉️</span><strong>contact.exe</strong>
+        </button>
+      </nav>
+    </aside>
+
+    <main class="workspace" aria-label="QA Agent OS workspace">
+      <section class="workspace-header">
+        <div>
+          <p class="workspace-kicker">Senior QA Engineer · SDET · AI Testing Specialist</p>
+          <h1 id="contentTitle">experience.exe</h1>
+        </div>
+        <div class="workspace-meta">
+          <span>Playwright</span>
+          <span>OWASP</span>
+          <span>AI QA</span>
+        </div>
+      </section>
+
+      <section class="content-panel" id="contentPanel" tabindex="-1" aria-live="polite"></section>
+    </main>
+
+    <script src="apps/experience.js"></script>
+    <script src="apps/projects.js"></script>
+    <script src="apps/skills.js"></script>
+    <script src="apps/contact.js"></script>
+    <script src="js/terminal.js"></script>
+    <script src="js/ai-agent.js"></script>
+    <script src="js/desktop.js"></script>
+  </body>
+</html>

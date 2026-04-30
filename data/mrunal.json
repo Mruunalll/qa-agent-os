@@ -1,0 +1,125 @@
+{
+  "profile": {
+    "name": "Mrunal Patil",
+    "title": "Senior QA Engineer | SDET | AI Testing Specialist",
+    "location": "Pune, India",
+    "email": "mrunalsp09@gmail.com",
+    "phone": "+91-9657084650",
+    "linkedin": "https://www.linkedin.com/in/mrunalpatil23",
+    "github": "https://github.com/Mruunalll",
+    "summary": "Senior QA Engineer and SDET with 4.7 years of experience across SaaS, WordPress, AI-assisted, and government-grade web/mobile products. Strong in Playwright E2E automation, API validation, OWASP-aligned security testing, release sign-off, and AI-assisted QA workflows."
+  },
+  "metrics": [
+    { "label": "Experience", "value": "4.7 yrs" },
+    { "label": "Automation Cases", "value": "200+" },
+    { "label": "Security Findings", "value": "15+" },
+    { "label": "Release Stability", "value": "95%+" }
+  ],
+  "experience": [
+    {
+      "role": "Senior QA Engineer / SDET",
+      "company": "Brainstorm Force",
+      "period": "Nov 2022 - Mar 2026",
+      "location": "Pune, India",
+      "scope": "WordPress & SaaS products: Astra, Starter Templates, Spectra, CartFlows, ZipWP, SureTriggers, SureForms, SureRank, SureMail, SureWriter.",
+      "highlights": [
+        "Built Playwright E2E automation for 200+ SaaS regression cases, reducing regression from 3 days to under 8 hours.",
+        "Owned QA strategy, release validation, and sign-off support for ZipWP, SureTriggers, and SureForms product workflows.",
+        "Integrated GitHub Actions quality gates and used AI-assisted test generation to speed up test design and defect triage.",
+        "Performed manual, regression, API, exploratory, and cross-browser testing across fast-moving SaaS releases."
+      ],
+      "awards": ["Rising Star Award 2023", "Bug Detective of the Year - ZipWP 2024", "Zero-Defect Delivery Award - SureForms 2025"]
+    },
+    {
+      "role": "Security Testing Engineer",
+      "company": "NIC / DigiLocker",
+      "period": "Oct 2021 - Nov 2022",
+      "location": "Delhi, India",
+      "scope": "Government digital platforms: DigiLocker, UMANG, SancharSaathi, API Setu, MeriPehchaan, OpenForge, Poshan Tracker.",
+      "highlights": [
+        "Executed OWASP Top 10-aligned testing across 7 platforms, identifying SQLi, XSS, IDOR, authentication, and API security risks.",
+        "Performed web, Android, API, manual, exploratory, and UI testing for public digital infrastructure workflows.",
+        "Logged and tracked 80+ defects in Jira, validated security patches, and performed post-fix regression checks."
+      ],
+      "awards": []
+    },
+    {
+      "role": "Web Developer & QA Intern",
+      "company": "Ninad Webtech",
+      "period": "Feb 2021 - Jun 2021",
+      "location": "Pune, India",
+      "scope": "Responsive web and WordPress projects.",
+      "highlights": [
+        "Developed and tested responsive HTML, CSS, JavaScript, and WordPress pages.",
+        "Performed UI, usability, and cross-browser testing; reported UI/UX defects before release."
+      ],
+      "awards": []
+    }
+  ],
+  "projects": [
+    {
+      "name": "SureForms Plugin QA Suite",
+      "type": "Automation",
+      "repo": "https://github.com/Mruunalll/SureForms-Plugin-Test-Suite-Manual-Automation",
+      "tags": ["Playwright", "POM", "Docker", "WordPress"],
+      "description": "Designed 181 manual cases and added Playwright POM automation with Docker execution, smoke checks, generated-form E2E flows, fixtures, and QA status reports."
+    },
+    {
+      "name": "AI Application QA Suite",
+      "type": "AI Testing",
+      "repo": "https://github.com/Mruunalll/ai-application-qa-test-suite",
+      "tags": ["AI QA", "Usability", "State Testing", "Security"],
+      "description": "Documented ChatGPT web/mobile QA with 32 cases, 11 defects, AI response usability checks, file upload/state testing, exploratory charters, RTM, and security observations."
+    },
+    {
+      "name": "WooCommerce E-Commerce QA Suite",
+      "type": "Manual QA",
+      "repo": "https://github.com/Mruunalll/ecommerce-manual-qa-test-suite",
+      "tags": ["RTM", "Checkout", "Mobile", "Bug Reports"],
+      "description": "Executed full manual QA cycle with 35 test cases, 12 bugs, RTM, exploratory charters, responsive/mobile coverage, and checkout/cart defect reports."
+    },
+    {
+      "name": "WordPress Astra QA Suite",
+      "type": "Manual QA",
+      "repo": "https://github.com/Mruunalll/wordpress-astra-qa-test-suite",
+      "tags": ["WordPress", "Theme QA", "Regression", "UI"],
+      "description": "Tested Astra Theme and Starter Templates across 30 cases and 10 defects covering data integrity, responsive UI, builder flows, imports, and regression risk."
+    },
+    {
+      "name": "SaaS E2E Automation Framework",
+      "type": "Automation",
+      "repo": "https://github.com/Mruunalll",
+      "tags": ["GitHub Actions", "API Mocking", "Reports", "Cross-browser"],
+      "description": "Built reusable Playwright POM coverage for login, forms, API mocking, cross-browser regression, parallel CI, flaky-test visibility, and failure reporting."
+    },
+    {
+      "name": "OWASP Security Checklist",
+      "type": "Security",
+      "repo": "https://github.com/Mruunalll",
+      "tags": ["OWASP", "SQLi", "XSS", "IDOR"],
+      "description": "Created OWASP Top 10 checklist using Burp Suite and Postman with reproduction steps, evidence, impact, and remediation guidance."
+    }
+  ],
+  "skills": [
+    { "group": "SDET & Automation", "score": 92, "items": ["Playwright", "TypeScript/JavaScript", "Page Object Model", "GitHub Actions", "E2E Regression"] },
+    { "group": "AI Testing", "score": 84, "items": ["AI app QA", "Prompt/response validation", "Hallucination-risk checks", "File upload", "State/session testing"] },
+    { "group": "Security & API", "score": 86, "items": ["OWASP Top 10", "Postman", "REST API", "SQLi", "XSS", "IDOR", "Burp Suite Basic"] },
+    { "group": "QA Leadership", "score": 88, "items": ["Test strategy", "Release sign-off", "RCA", "RTM", "Agile/Scrum", "Cross-functional collaboration"] }
+  ],
+  "education": [
+    "MCA - Pimpri Chinchwad College of Engineering, Pune, 2021-2022",
+    "B.Sc Computer Science - Moolji Jaitha College, Jalgaon, 2017-2020"
+  ],
+  "certifications": [
+    "ISTQB CTFL - In Progress",
+    "Playwright Automation Professional Certificate - LambdaTest/TAU, 2024",
+    "Ethical Hacking - EC-Council/Coursera, 2022",
+    "UX Design - Google/Coursera, 2023"
+  ],
+  "quickAnswers": {
+    "manual": "Yes. Mrunal has strong manual QA experience across SaaS, WordPress, government web apps, Android workflows, regression, UI, exploratory, cross-browser, and defect lifecycle testing.",
+    "automation": "She built Playwright E2E automation for 200+ SaaS regression cases, used POM architecture, GitHub Actions quality gates, API mocking, Docker execution, and reporting.",
+    "lead": "Yes. She owned QA strategy, test planning, release validation, and sign-off support for ZipWP, SureTriggers, and SureForms. She also collaborated with product and engineering in Agile ceremonies.",
+    "security": "She executed OWASP Top 10-aligned testing across 7 government platforms, finding SQLi, XSS, IDOR, authentication, and API security risks, then validated fixes and regression cycles."
+  }
+}
