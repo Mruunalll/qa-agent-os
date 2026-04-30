@@ -1,15 +1,17 @@
 :root {
-  --bg: #081018;
-  --sidebar: rgba(7, 16, 24, 0.92);
-  --panel: rgba(13, 24, 34, 0.76);
+  --bg: #0d1b2a;
+  --sidebar: rgba(8, 19, 30, 0.94);
+  --panel: rgba(13, 27, 42, 0.78);
   --panel-strong: rgba(20, 34, 47, 0.9);
   --surface: rgba(237, 248, 251, 0.08);
   --line: rgba(187, 224, 234, 0.18);
   --text: #eef8fb;
   --muted: #9eb4c0;
   --teal: #55d6c2;
+  --purple: #a78bfa;
   --blue: #78a7ff;
   --amber: #f4bd64;
+  --green: #4ade80;
   --danger: #ff6b7b;
   --sidebar-width: 220px;
   --topbar-height: 58px;
@@ -43,10 +45,10 @@ input {
   inset: 0;
   background:
     radial-gradient(circle at 18% 12%, rgba(85, 214, 194, 0.22), transparent 28%),
-    radial-gradient(circle at 82% 68%, rgba(120, 167, 255, 0.2), transparent 30%),
+    radial-gradient(circle at 82% 68%, rgba(167, 139, 250, 0.18), transparent 30%),
     linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
     linear-gradient(0deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(135deg, #071019, #101e2b 54%, #071018);
+    linear-gradient(135deg, #0d1b2a, #13243a 54%, #0c1724);
   background-size: auto, auto, 74px 74px, 74px 74px, auto;
 }
 
@@ -111,10 +113,10 @@ input {
 }
 
 .status-pill {
-  border: 1px solid rgba(85, 214, 194, 0.34);
+  border: 1px solid rgba(74, 222, 128, 0.34);
   border-radius: 999px;
   padding: 6px 10px;
-  color: var(--teal);
+  color: var(--green);
 }
 
 .sidebar {
@@ -144,7 +146,7 @@ input {
   width: 46px;
   height: 46px;
   border: 2px solid rgba(255, 255, 255, 0.18);
-  border-radius: 14px;
+  border-radius: 50%;
   object-fit: cover;
 }
 
@@ -160,17 +162,37 @@ input {
 
 .sidebar-nav {
   display: grid;
-  gap: 6px;
+  gap: 5px;
   padding: 12px;
+}
+
+.nav-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 14px 8px 6px;
+  color: color-mix(in srgb, var(--muted) 72%, transparent);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.nav-group::after {
+  height: 1px;
+  flex: 1;
+  background: var(--line);
+  content: "";
 }
 
 .sidebar-item {
   display: grid;
-  grid-template-columns: 32px minmax(0, 1fr);
+  grid-template-columns: 32px minmax(0, 1fr) 12px;
   gap: 10px;
   align-items: center;
   min-height: 52px;
   border: 1px solid transparent;
+  border-left: 3px solid transparent;
   border-radius: 12px;
   padding: 0 12px;
   background: transparent;
@@ -189,12 +211,23 @@ input {
 
 .sidebar-item.active {
   border-color: rgba(85, 214, 194, 0.45);
+  border-left-color: var(--teal);
   background: linear-gradient(90deg, rgba(85, 214, 194, 0.16), rgba(120, 167, 255, 0.08));
   color: var(--teal);
 }
 
-.sidebar-item span {
+.app-icon {
+  display: inline-grid;
+  width: 28px;
+  height: 28px;
+  place-items: center;
   font-size: 20px;
+}
+
+.text-icon {
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 900;
 }
 
 .sidebar-item strong {
@@ -202,6 +235,29 @@ input {
   font-size: 13px;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  justify-self: end;
+}
+
+.status-dot.good {
+  background: var(--green);
+}
+
+.status-dot.warn {
+  background: var(--amber);
+}
+
+.status-dot.ai {
+  background: var(--purple);
+}
+
+.status-dot.neutral {
+  background: var(--blue);
 }
 
 .workspace {
@@ -223,7 +279,7 @@ input {
   border: 1px solid var(--line);
   border-bottom: 0;
   border-radius: 18px 18px 0 0;
-  padding: 18px 20px;
+  padding: 22px 20px 18px;
   background: rgba(8, 16, 24, 0.72);
   backdrop-filter: blur(18px);
 }
@@ -252,12 +308,24 @@ input {
 
 .workspace-meta span,
 .chip {
-  border: 1px solid rgba(85, 214, 194, 0.28);
+  border: 1px solid color-mix(in srgb, var(--chip-color, var(--teal)) 42%, transparent);
   border-radius: 999px;
   padding: 6px 9px;
-  color: var(--teal);
+  color: var(--chip-color, var(--teal));
   font-size: 12px;
   font-weight: 800;
+}
+
+.workspace-meta span:nth-child(1) {
+  --chip-color: var(--teal);
+}
+
+.workspace-meta span:nth-child(2) {
+  --chip-color: var(--amber);
+}
+
+.workspace-meta span:nth-child(3) {
+  --chip-color: var(--purple);
 }
 
 .content-panel {
@@ -265,7 +333,7 @@ input {
   overflow: auto;
   border: 1px solid var(--line);
   border-radius: 0 0 18px 18px;
-  padding: clamp(16px, 3vw, 24px);
+  padding: clamp(28px, 3vw, 34px) clamp(16px, 3vw, 24px) clamp(16px, 3vw, 24px);
   background: var(--panel);
   box-shadow: var(--shadow);
   backdrop-filter: blur(18px);
@@ -291,6 +359,41 @@ input {
 .app-hero h2 {
   margin: 0;
   font-size: clamp(24px, 4vw, 36px);
+}
+
+.app-ai .workspace-kicker,
+.app-ai .app-hero h2 {
+  color: var(--purple);
+}
+
+.app-ai .chip,
+.app-ai .quick-questions button:hover {
+  --chip-color: var(--purple);
+  border-color: color-mix(in srgb, var(--purple) 44%, transparent);
+  color: var(--purple);
+}
+
+.app-security .chip,
+.app-security .scan-row strong {
+  --chip-color: var(--amber);
+  color: var(--amber);
+}
+
+.app-projects .project-card:nth-child(2) .chip,
+.app-projects .project-card:nth-child(2) .muted {
+  --chip-color: var(--purple);
+  color: var(--purple);
+}
+
+.app-projects .project-card:nth-child(6) .chip,
+.app-projects .project-card:nth-child(6) .muted {
+  --chip-color: var(--amber);
+  color: var(--amber);
+}
+
+.app-experience .chip,
+.app-skills .chip {
+  --chip-color: var(--green);
 }
 
 .app-hero p,

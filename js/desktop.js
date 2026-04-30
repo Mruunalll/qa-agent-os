@@ -82,9 +82,11 @@ function renderApp(appName, options = {}) {
   const app = appFactory();
   const panel = document.querySelector("#contentPanel");
   const title = document.querySelector("#contentTitle");
+  const workspace = document.querySelector(".workspace");
 
   state.activeApp = appName;
   title.textContent = app.title;
+  workspace.dataset.app = appName;
   panel.className = `content-panel app-${appName}`;
   panel.innerHTML = app.render(state.data);
 
@@ -97,6 +99,22 @@ function renderApp(appName, options = {}) {
   if (typeof app.bind === "function") app.bind(panel, state.data);
   if (options.focusPanel) panel.focus({ preventScroll: true });
   setSidebarOpen(false);
+}
+
+function startRoleTyping() {
+  const target = document.querySelector("#typedRole");
+  const text = target.dataset.text || target.textContent.trim();
+  target.dataset.text = text;
+  target.textContent = "";
+
+  let index = 0;
+  const typeNext = () => {
+    target.textContent = text.slice(0, index);
+    index += 1;
+    if (index <= text.length) window.setTimeout(typeNext, 34);
+  };
+
+  typeNext();
 }
 
 function bindSidebar() {
@@ -134,6 +152,7 @@ function bindKeyboardShortcuts() {
 async function bootDesktop() {
   updateClock();
   setInterval(updateClock, 30000);
+  startRoleTyping();
   await loadData();
   bindSidebar();
   bindCopyButtons();

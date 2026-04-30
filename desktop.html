@@ -27,7 +27,7 @@
 
       <nav class="topbar-status" aria-label="System status">
         <span id="statusClock">--:--</span>
-        <span>Mrunal Patil</span>
+        <span id="typedRole" aria-label="Role">Senior QA · SDET · AI Tester</span>
         <span class="status-pill">AI Ready</span>
       </nav>
     </header>
@@ -44,29 +44,34 @@
       </section>
 
       <nav class="sidebar-nav">
+        <p class="nav-group">Work</p>
         <button class="sidebar-item" type="button" data-app="experience">
-          <span>📁</span><strong>experience.exe</strong>
+          <span class="app-icon">💼</span><strong>experience.exe</strong><i class="status-dot good" aria-hidden="true"></i>
         </button>
         <button class="sidebar-item" type="button" data-app="projects">
-          <span>🧪</span><strong>run_tests.sh</strong>
+          <span class="app-icon">⚡</span><strong>run_tests.sh</strong><i class="status-dot good" aria-hidden="true"></i>
         </button>
+
+        <p class="nav-group">AI</p>
         <button class="sidebar-item" type="button" data-app="ai">
-          <span>🤖</span><strong>ai_agent.chat</strong>
-        </button>
-        <button class="sidebar-item" type="button" data-app="security">
-          <span>🛡️</span><strong>security_scan</strong>
-        </button>
-        <button class="sidebar-item" type="button" data-app="skills">
-          <span>⚙️</span><strong>skills.exe</strong>
+          <span class="app-icon">✦</span><strong>ai_agent.chat</strong><i class="status-dot ai" aria-hidden="true"></i>
         </button>
         <button class="sidebar-item" type="button" data-app="terminal">
-          <span>⌁</span><strong>terminal.sh</strong>
+          <span class="app-icon text-icon">&gt;_</span><strong>terminal.sh</strong><i class="status-dot neutral" aria-hidden="true"></i>
+        </button>
+
+        <p class="nav-group">Info</p>
+        <button class="sidebar-item" type="button" data-app="skills">
+          <span class="app-icon">◇</span><strong>skills.exe</strong><i class="status-dot good" aria-hidden="true"></i>
+        </button>
+        <button class="sidebar-item" type="button" data-app="security">
+          <span class="app-icon">🛡️</span><strong>security_scan</strong><i class="status-dot warn" aria-hidden="true"></i>
         </button>
         <button class="sidebar-item" type="button" data-app="resume">
-          <span>📄</span><strong>resume.pdf</strong>
+          <span class="app-icon">↓</span><strong>resume.pdf</strong><i class="status-dot neutral" aria-hidden="true"></i>
         </button>
         <button class="sidebar-item" type="button" data-app="contact">
-          <span>✉️</span><strong>contact.exe</strong>
+          <span class="app-icon">@</span><strong>contact.exe</strong><i class="status-dot neutral" aria-hidden="true"></i>
         </button>
       </nav>
     </aside>
